@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chinmai Reddy Yerasi — Portfolio</title>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent:#06b6d4;
+      --muted:#9aa6b2;
+      --glass: rgba(255,255,255,0.03);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#071028 0%, #071622 100%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:1000px;
+      display:grid;
+      grid-template-columns: 290px 1fr;
+      gap:24px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;
+      padding:20px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    /* SIDEBAR */
+    .sidebar{
+      position:relative;
+      overflow:hidden;
+    }
+    .photo-wrap{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    .photo{
+      width:84px;
+      height:84px;
+      border-radius:12px;
+      object-fit:cover;
+      background:linear-gradient(135deg,var(--accent), #7c3aed);
+      flex-shrink:0;
+      border:2px solid rgba(255,255,255,0.06);
+    }
+    .name {
+      font-size:20px;
+      font-weight:700;
+      line-height:1;
+    }
+    .subtitle{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:6px;
+    }
+    .contact{
+      margin-top:14px;
+      font-size:14px;
+      color:var(--muted);
+      display:grid;
+      gap:8px;
+    }
+    .contact a{ color:var(--accent); text-decoration:none; }
+
+    .skill-list{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .skill{
+      background:var(--glass);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.02);
+    }
+
+    /* MAIN */
+    .main{
+      line-height:1.5;
+    }
+    h2{
+      margin:0 0 10px 0;
+      font-size:18px;
+      letter-spacing:0.2px;
+      color:#eaf6fb;
+    }
+    section{
+      margin-bottom:18px;
+    }
+    .edu-item, .intern-item, .proj-item{
+      background: rgba(255,255,255,0.015);
+      border-radius:10px;
+      padding:12px;
+      margin-bottom:10px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .muted { color:var(--muted); font-size:14px; }
+    .meta { font-size:13px; color:var(--muted); }
+
+    /* responsive */
+    @media (max-width:880px){
+      .container{ grid-template-columns: 1fr; padding:8px; }
+      .photo{ width:96px; height:96px; }
+    }
+
+    /* little accent bar */
+    .accent-bar{
+      height:6px;
+      width:100%;
+      border-radius:8px;
+      background: linear-gradient(90deg,var(--accent), #7c3aed);
+      margin-top:12px;
+    }
+
+    /* button */
+    .btn {
+      display:inline-block;
+      padding:8px 12px;
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:8px;
+      color:var(--accent);
+      text-decoration:none;
+      font-size:14px;
+      cursor:pointer;
+    }
+
+    /* small list style */
+    ul.clean{ padding-left:16px; margin:8px 0; }
+    ul.clean li{ margin-bottom:6px; }
+
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <!-- SIDEBAR -->
+    <aside class="card sidebar" aria-label="Sidebar">
+      <div class="photo-wrap">
+        <!-- Replace "photo.jpg" with your actual filename. -->
+        <!-- If you want a circular photo, usestyle: border-radius:50% on .photo -->
+        <img src="photo.jpg" alt="Chinmai Reddy Yerasi — photo" class="photo" onerror="this.style.display='block';this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2284%22 height=%2284%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%2306b6d4%22 rx=%2212%22/><text x=%2250%25%22 y=%2255%25%22 font-size=%2228%22 font-family=%22Arial%22 fill=%22white%22 text-anchor=%22middle%22>CR</text></svg>'" />
+        <div>
+          <div class="name">Chinmai Reddy Yerasi</div>
+          <div class="subtitle">MSc Cybersecurity & Forensic Science</div>
+        </div>
+      </div>
+
+      <div class="meta">Contact</div>
+      <div class="contact">
+        <div>✉️ <a href="mailto:yerasichinmaireddy@gmail.com">yerasichinmaireddy@gmail.com</a></div>
+        <div>📞 9032726165</div>
+        <div>🔗 <a href="https://www.linkedin.com/in/chinmai-reddy-yerasi-2012002a0" target="_blank" rel="noopener">LinkedIn / chinmai-reddy-yerasi</a></div>
+      </div>
+
+      <div style="margin-top:14px" class="meta">Skills</div>
+      <div class="skill-list" aria-hidden="false">
+        <div class="skill">Penetration Testing</div>
+        <div class="skill">Threat Analysis</div>
+        <div class="skill">Incident Response</div>
+        <div class="skill">Digital Forensics</div>
+        <div class="skill">Wireshark</div>
+        <div class="skill">Nmap</div>
+        <div class="skill">Metasploit</div>
+        <div class="skill">Burp Suite</div>
+        <div class="skill">Kali Linux</div>
+      </div>
+
+      <div class="accent-bar" role="presentation" aria-hidden="true"></div>
+
+      <div style="margin-top:12px; display:flex; gap:8px; align-items:center;">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#contact">Hire me</a>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="card main" aria-label="Main content">
+      <section id="about">
+        <h2>Career Objective</h2>
+        <p class="muted">To start my career with an organization where I can utilize my knowledge, enhance my skills, and contribute to achieving organizational goals while growing professionally.</p>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="edu-item">
+          <strong>Srinivas University, Mangalore</strong> <span class="meta">2023–2025</span>
+          <div class="muted">MSc, Cybersecurity & Forensic Science — GPA: 9.3/10</div>
+          <div class="meta">Relevant coursework: Ethical Hacking, Network Security, Digital Forensics, Cryptography, Incident Response</div>
+        </div>
+
+        <div class="edu-item">
+          <strong>Jain University, Bangalore</strong> <span class="meta">2020–2023</span>
+          <div class="muted">BSc, Forensic Science — GPA: 7.9/10</div>
+          <div class="meta">Relevant coursework: Crime scene investigation, DNA analysis, fingerprinting, ballistics, digital forensics, forensic psychology</div>
+        </div>
+      </section>
+
+      <section id="internships">
+        <h2>Internships & Courses</h2>
+        <div class="intern-item">
+          <strong>Hacker’s School, Hyderabad</strong> <span class="meta">May 2025</span>
+          <div class="muted">Ethical Hacking — vulnerability assessments, penetration testing, risk remediation</div>
+        </div>
+
+        <div class="intern-item">
+          <strong>Microsoft Student SOC Program — Foundations</strong> <span class="meta">September 2025</span>
+          <div class="muted">Security operations, incident response, threat analysis</div>
+        </div>
+
+        <div class="intern-item">
+          <strong>Cyber Dosti</strong> <span class="meta">March 2024</span>
+          <div class="muted">Cybersecurity & Ethical Hacking: network scanning, reconnaissance, vulnerability assessment</div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects & Publications</h2>
+        <div class="proj-item">
+          <strong>"Advancements and challenges in spam detection systems"</strong>
+          <div class="muted">A comprehensive review of SMS, VoIP, Telephony, And Mobile Applications</div>
+        </div>
+
+        <div class="proj-item">
+          <strong>"Cracked Vs. Official Android Applications"</strong>
+          <div class="muted">Comparative study of user experience, perceived risks, and ethical concerns</div>
+        </div>
+
+        <div class="proj-item">
+          <strong>Review on mobile applications to assess child abuse</strong>
+          <div class="muted">Assessment of different apps available in the market</div>
+        </div>
+
+        <div class="proj-item">
+          <strong>Study on psychological impact of crime on victims</strong>
+          <div class="muted">Research into victim psychology and consequences</div>
+        </div>
+      </section>
+
+      <section id="languages">
+        <h2>Languages</h2>
+        <ul class="clean">
+          <li>English</li>
+          <li>Telugu</li>
+          <li>Kannada</li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p class="muted">Email: <a href="mailto:yerasichinmaireddy@gmail.com">yerasichinmaireddy@gmail.com</a> — Phone: 9032726165</p>
+        <p class="muted">LinkedIn: <a href="https://www.linkedin.com/in/chinmai-reddy-yerasi-2012002a0" target="_blank" rel="noopener">chinmai-reddy-yerasi</a></p>
+        <p class="muted">Declaration: I hereby declare that the above-mentioned information is true and correct to the best of my knowledge and belief.</p>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    // Small convenience: scroll to hash smoothly
+    if ('scrollBehavior' in document.documentElement.style) {
+      const links = document.querySelectorAll('a[href^="#"]');
+      links.forEach(a => a.addEventListener('click', e => {
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
+      }));
+    }
+  </script>
+</body>
+</html>
